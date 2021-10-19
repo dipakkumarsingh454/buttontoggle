@@ -16,9 +16,6 @@ io.on('connection', (socket) => {
 
     socket.on('toggleButton', (message) => {
         console.log(message);
-
-        // io.sockets.emit('sendChatToClient', message);
-        //socket.broadcast.emit('toggleInstruction', message);
         io.emit('toggleInstruction', message);
     });
 
